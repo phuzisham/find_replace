@@ -9,8 +9,8 @@ class FRP
     string = @str.split(' ')
     i = 0
     while(i < string.length) do
-      if (string[i]  === target)
-        string[i] = change
+      if (string[i].include?(target))
+        string[i].sub!(target, change)
       end
       i += 1
     end
